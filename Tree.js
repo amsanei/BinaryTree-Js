@@ -39,28 +39,28 @@ exports.Tree = class{
         }
         return false;
     }
-    traversePreOrder(root = tree.root){
+    traversePreOrder(root){
         if(root == null)
             return;
         console.log(root.value);
         this.traversePreOrder(root.leftChild);
         this.traversePreOrder(root.rightChild);
     }
-    traverseInOrder(root = tree.root){
+    traverseInOrder(root){
         if(root == null)
             return;
         this.traversePreOrder(root.leftChild);
         console.log(root.value);
         this.traversePreOrder(root.rightChild);
     }
-    traversePostOrder(root = tree.root){
+    traversePostOrder(root){
         if(root == null)
             return;
         this.traversePreOrder(root.leftChild);
         this.traversePreOrder(root.rightChild);
         console.log(root.value);
     }
-    height(root = this.root){
+    height(root){
         if(root == null)
             return -1;
         if(root.leftChild == null && root.rightChild == null)

@@ -14,3 +14,4 @@ tree.insert(10);
 // tree.traverseInOrder(tree.root);
 // tree.traversePostOrder(tree.root);
 console.log(tree.height(tree.root));
+console.log(tree.min(tree.root));

@@ -78,4 +78,44 @@ exports.Tree = class{
     is_leaf(root){
         return root.leftChild == null && root.rightChild == null;
     }
+    equals(first, second){
+        if(first == null && second == null)
+            return true;
+        if(first != null && second != null)
+            return first.value == second.value
+                && this.equals(first.leftChild, second.leftChild)
+                && this.equals(first.rightChild, second.rightChild);
+        return false
+    }
+    isBinarySearchTree(root,min,max){
+        if(root == null)
+            return true;
+        if(root.value < min || root.value > max)
+            return false;
+        return this.isBinarySearchTree(root.leftChild,min,root.value - 1)
+            && this.isBinarySearchTree(root.rightChild,root.value + 1 , max);
+    }
+    // this one swap the root left and right childs to check if the
+    // isBinarySearchTree() is work or not
+    swapRoot(){
+        var temp = this.root.leftChild;
+        this.root.leftChild = this.root.rightChild;
+        this.root.rightChild = temp;
+    }
+    getNodesAtDistance(distance){
+        var list = new Array();
+        this.#getNodesAtDistance(this.root,distance,list);
+        return list;
+    }
+    #getNodesAtDistance(root, distance, list){
+        if(root == null)
+            return root.value;
+        if(distance == 0){
+            list.push(root.value);
+            return;
+        }
+        this.#getNodesAtDistance(root.leftChild,distance-1,list);
+        this.#getNodesAtDistance(root.rightChild,distance-1,list);
+    }
+
 }

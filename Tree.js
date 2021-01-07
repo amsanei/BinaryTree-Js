@@ -63,19 +63,19 @@ exports.Tree = class{
     height(root){
         if(root == null)
             return -1;
-        if(this.isLeaf(root))
+        if(this.#isLeaf(root))
             return 0;
         return 1 + Math.max(this.height(root.leftChild),this.height(root.rightChild));
     }
     min(root){
-        if(this.isLeaf(root))
+        if(this.#isLeaf(root))
             return root.value;
         var left = this.min(root.leftChild);
         var right = this.min(root.rightChild);
 
         return Math.min(Math.min(left,right),root.value);
     }
-    isLeaf(root){
+    #isLeaf(root){
         return root.leftChild == null && root.rightChild == null;
     }
     equals(first, second){

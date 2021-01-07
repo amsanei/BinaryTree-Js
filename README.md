@@ -1,5 +1,5 @@
-# Binary Tree.Js
- Implementing Binary Tree in JS using class
+# BinaryTree.Js
+ Implementing Binary Tree in JS using class and Node.js
  
 ---
 ## Features
@@ -50,8 +50,8 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
 ## Install
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
+    $ git clone https://github.com/amsanei/BinaryTree-Js.git
+    $ cd BinaryTree-Js
 
 ## Running the project
 

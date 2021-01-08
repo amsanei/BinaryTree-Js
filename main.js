@@ -8,6 +8,7 @@ tree.insert(1);
 tree.insert(6);
 tree.insert(8);
 tree.insert(10);
+
 var tree2 = new cls.Tree;
 tree2.insert(7);
 tree2.insert(4);
@@ -16,15 +17,11 @@ tree2.insert(1);
 tree2.insert(6);
 tree2.insert(8);
 tree2.insert(10);
-// console.log(tree.find(10));
-// console.log(tree.find(11));
-// tree.traversePreOrder(tree.root);
-// tree.traverseInOrder(tree.root);
-// tree.traversePostOrder(tree.root);
+
 console.log(tree.height(tree.root));
 console.log(tree.min(tree.root));
 console.log(tree.equals(tree.root,tree2.root));
-// tree.swapRoot(); 
+
 console.log(tree.isBinarySearchTree(tree.root,Number.MIN_VALUE,Number.MAX_VALUE));
 console.log(tree.getNodesAtDistance(0));
 console.log(tree.getNodesAtDistance(1));
